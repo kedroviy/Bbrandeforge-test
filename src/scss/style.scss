@@ -1,0 +1,26 @@
+@import './fonts.scss';
+
+body{
+    background-color: #B7BABE;
+
+    .wrapper{
+
+        div:nth-child(1){
+            display: flex;
+            justify-content: center;
+
+            >p{
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 36px;
+                line-height: 49px;
+                color: #191B1D;
+                
+                >span{
+                    color: white;
+                }
+            }
+        }
+    }
+}
