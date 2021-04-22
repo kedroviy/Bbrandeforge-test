@@ -1,5 +1,6 @@
 import visibilityEye from '../assets/images/visibility.png';
 import clipImg from '../assets/images/clip.png';
+import './fileInput'
 const formButton = document.querySelector('.form-button');
 const formSelect = document.querySelector('.select-form');
 
@@ -26,7 +27,7 @@ const addMoreOption = function(params) {
 
         for( let k = 0; k < 1 ; k++) {
         formSelect.appendChild(option);
-        option.setAttribute('value',  i);
+        option.setAttribute('value',  optionData[i]);
         option.appendChild(document.createTextNode(optionData[i]))
         }
     }
@@ -44,4 +45,27 @@ addImage(
     document.createElement('img'),
     document.querySelector('.clip-img'),
     clipImg
-)
+);
+
+formButton.addEventListener('click', function(){
+    const phoneNumberInput = document.querySelector('.phone-number-form')
+    if(phoneNumberInput.value === ''){
+        phoneNumberInput.classList.add('phone-wrong')
+    } else {
+        phoneNumberInput.classList.remove('phone-wrong')
+    }
+
+    const optionParent = document.querySelector('.select-form')
+    const optionValue = optionParent.options[optionParent.selectedIndex].text
+    
+        switch (optionValue) {
+        case 'Выбор чего-то*':
+           optionParent.classList.add('phone-wrong')
+            break;
+    
+        default:
+        optionParent.classList.remove('phone-wrong')
+            break;
+    }
+});
+
