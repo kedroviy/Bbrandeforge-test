@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Bbrandsfroge</title>
+    <title>Bbrandsforge</title>
 </head>
 <body>
     <div class="wrapper">
@@ -20,7 +21,40 @@
                 <p>Сверстайте эту страницу включая интерактивные элементы.</p>
             </div>
         </header>
-        <main></main>
+        <main>
+            <section>
+                <div class="fox-loader">
+                    <model-viewer src="./assets/images/fox.gltf" camera-controls exposure="0.17" shadow-intensity="0" shadow-softness="1" auto-rotate></model-viewer>
+                </div>
+                <div></div>
+            </section>
+            <section>
+                <div>
+                    <form action="">
+                        <div>
+                            <h3>Форма</h3>
+                            <p>Дополнительный текст ⏳</p>
+                        </div>
+                        <div>
+                            <select class="select-form"></select>
+                            <input type="text" placeholder="Номер телефона*">
+                            <input type="text" placeholder="Коротко о чём-то ещё">
+                        </div>
+                        <label class="upload-file" for="upload">
+                            <div>
+                                <div class="clip-img"></div>
+                                <p>Прикрепить файл</p>
+                            </div>
+                            <input type="file" id="upload" name="file">
+                        </label>
+                        <button class="form-button">
+                            <p>Кнопка</p>
+                        </button>
+                    </form>
+                </div>
+                <div></div>
+            </section>
+        </main>
         <footer></footer>
     </div>
     <script src="./index.js"></script>

@@ -9,6 +9,11 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    alias: {
+      images: path.resolve(__dirname, './src/assets/images/'),
+    },
+  },
   devServer: {
     contentBase: './dist',
   },
@@ -21,6 +26,14 @@ module.exports = {
                 { loader: 'sass-loader', options: { sourceMap: true } },
             ],
         },
+        {
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+            outputPath: './src/assets/images/'
+        },
+      },
         {
             test: /\.html$/i,
             loader: 'html-loader',
@@ -35,20 +48,16 @@ module.exports = {
                 }
             }
         },
-        {
-            test: /\.(png|svg|jpg|gif)$/,
-            use: [
-                'file-loader',
-            ],
-        },
     ],
     },
 
     plugins: [
         new HtmlWebpackPlugin({ 
             title: 'brameforge',
-            template: './src/index.html'
+            template: './src/index.html',
             }),
-        new MiniCssExtractPlugin({ filename: '[name].css' }),
+        new MiniCssExtractPlugin({ 
+            filename: '[name].css' 
+            }),
     ],
 };
