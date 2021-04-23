@@ -1,8 +1,5 @@
 const tablinks = document.querySelectorAll('.tablinks');
-const tabContainer = document.querySelector('.tab-container')
-const tabsContent = document.querySelector('.tab-container');
-const tabLinkContainer = document.querySelector('.tab-controllers')
-    const tabItems = document.querySelectorAll('.tabcontent');
+const tabItems = document.querySelectorAll('.tabcontent');
 
 for ( let i = 0; i < tabItems.length; i++){
     tabItems[i].addEventListener('click', function(){
@@ -13,7 +10,6 @@ for ( let i = 0; i < tabItems.length; i++){
         }
     })
 }
-    let selectedTd;
 
 for( let j = 0; j < tablinks.length; j++){
     tablinks[j].addEventListener('click', function(event){
@@ -27,10 +23,3 @@ for( let j = 0; j < tablinks.length; j++){
         }
     })
 }
-
-    
-
-    
-
-
-        

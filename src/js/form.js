@@ -2,6 +2,7 @@ import visibilityEye from '../assets/images/visibility.png';
 import clipImg from '../assets/images/clip.png';
 import './fileInput';
 import './tabs';
+import './parallacs';
 const formButton = document.querySelector('.form-button');
 const formSelect = document.querySelector('.select-form');
 
