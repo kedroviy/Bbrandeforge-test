@@ -3,6 +3,7 @@ import clipImg from '../assets/images/clip.png';
 import './fileInput';
 import './tabs';
 import './parallacs';
+import './animation';
 const formButton = document.querySelector('.form-button');
 const formSelect = document.querySelector('.select-form');
 
