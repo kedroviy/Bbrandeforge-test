@@ -168,6 +168,12 @@ body{
                                 height: 35px;
                                 border: none;
                                 border-bottom: 1px solid #F4F4F4;
+                                font-family: 'Manrope';
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 20px;
+                                line-height: 32px;
+                                color: #191B1D;
                                 padding: 0 5px 5px 10px;
 
                                 &::placeholder{
@@ -255,6 +261,122 @@ body{
                             }
                         }
                     }
+                }
+
+                >div:nth-child(2){
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    >div{
+                        display: flex;
+                        width: 504px;
+                        height: 678px;
+                        background-color: #FFFFFF;
+
+                        .tab-controllers{
+                            width: 25%;
+                            height: 90%;
+                            margin: 20% 0 0 10%;
+
+                            >div{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 88px;
+                                height: 48px;
+                                cursor: pointer;
+
+                                >p{
+                                    font-family: 'Manrope';
+                                    font-style: normal;
+                                    font-weight: 800;
+                                    font-size: 20px;
+                                    line-height: 24px;
+                                    color: #191B1D;
+                                    opacity: 0.35;
+                                }
+                            }
+
+                            .active-tab{
+                                background-color: #F4F4F4;
+
+                                >p{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .tab-container{
+                            display: flex;
+                            flex-direction: column;
+                            margin: 20% 0 0 0%;
+                            width: 56%;
+
+                            .tabcontent{
+                                
+                                .tabcontent-header{
+
+                                    >h3{
+                                        position: relative;
+                                        width: 272px;
+                                        font-family: 'Manrope';
+                                        font-style: normal;
+                                        font-weight: bold;
+                                        font-size: 16px;
+                                        line-height: 16px;
+                                        color: #191B1D;
+                                        border-bottom: 1px solid #F4F4F4;;
+                                        padding-bottom: 15px;
+                                        cursor: pointer;
+
+                                        &::after{
+                                            position: absolute;
+                                            content: url('/src/assets/images/arrow_down.png');
+                                            top: -10px;
+                                            left: 93%;
+                                            
+                                        }
+                                    }
+
+                                    >img{
+                                        width: 10px;
+                                        height: 10px;
+                                    }
+                                }
+                                
+                                >p{
+                                    font-family: 'Manrope';
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 13px;
+                                    line-height: 16px;
+                                    display: none;
+                                    width: 65%;
+                                }
+                            } 
+
+                            .active-tab{
+
+                                .tabcontent-header{
+
+                                    >h3{
+
+                                        &::after{
+                                            position: absolute;
+                                            content: url('./src/assets/images/arrow_up.png');
+                                            top: -10px;
+                                            left: 96%;
+                                        }
+                                    }
+                                }
+
+                                .text-content{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }  
                 }
             }   
         }
