@@ -287,7 +287,7 @@ body{
                                 height: 48px;
                                 cursor: pointer;
 
-                                >p{
+                                >a{
                                     font-family: 'Manrope';
                                     font-style: normal;
                                     font-weight: 800;
@@ -295,20 +295,21 @@ body{
                                     line-height: 24px;
                                     color: #191B1D;
                                     opacity: 0.35;
+                                    text-decoration: none;
                                 }
                             }
 
-                            .active-tab{
+                            .active-tab-link{
                                 background-color: #F4F4F4;
 
-                                >p{
+                                >a{
                                     opacity: 1;
                                 }
                             }
                         }
 
                         .tab-container{
-                            display: flex;
+                            display: none;
                             flex-direction: column;
                             margin: 20% 0 0 0%;
                             width: 56%;
@@ -375,6 +376,14 @@ body{
                                     display: block;
                                 }
                             }
+
+                            &:target{
+                                display: flex;
+                            }
+                        }
+
+                        #second-tab-container{
+                            display: none;
                         }
                     }  
                 }
