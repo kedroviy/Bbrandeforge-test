@@ -17,7 +17,14 @@ for ( let i = 0; i < tabItems.length; i++){
 
 for( let j = 0; j < tablinks.length; j++){
     tablinks[j].addEventListener('click', function(event){
-        console.log(tablinks[j])      
+        if( tablinks[j].classList.contains('active-tab-link')) {
+            return;
+        } else {
+            tablinks.forEach(element => {
+                element.classList.remove('active-tab-link')
+            });
+            tablinks[j].classList.add('active-tab-link')
+        }
     })
 }
 
