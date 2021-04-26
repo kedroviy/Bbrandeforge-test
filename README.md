@@ -1,7 +1,7 @@
 # Bbrandeforge-test
 
 ## init project
-> npm i
+> npm i  
 > npm run start
 ## time management
 > install all dependencies for webpack -- 2hours  
